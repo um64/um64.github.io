@@ -39,7 +39,10 @@
         setTimeout(() => {
           document.title = "Link Tech";
         }, 1000); // Delays the title change to override Framer updates
+        
       </script>
+      
+
       
     <style data-framer-css-ssr-minified=""
         data-framer-components="framer-lib-cursors-host framer-Tj7bQ PropertyOverrides framer-qqicA framer-Ta5KT framer-lSrkx framer-lib-form-plain-text-input framer-tsfx9 framer-j55FK">
@@ -5733,10 +5736,12 @@
                                         </button></div>
                                 </form>
                                 <script>
+                                    console.log('Form submission script loaded');
                                     document.addEventListener("DOMContentLoaded", function () {
+                                        console.log('Form submission script loaded');
                                         document.querySelector(".framer-1pd2xn7").addEventListener("submit", function (event) {
                                             event.preventDefault();
-                                    
+                                            console.log('Form submission script loaded');
                                             let formData = {
                                                 name: document.querySelector("input[name='Name']").value.trim(),
                                                 email: document.querySelector("input[name='Email']").value.trim(),
@@ -5744,7 +5749,7 @@
                                             };
                                     
                                             console.log("Sending data:", formData); // Debugging step
-                                    
+                                            console.log('Form submission script loaded');
                                             fetch("https://script.google.com/macros/s/AKfycbxcEcmnQJBy9wT2dUTdToRUbQJDr2G4fSPU7MqfLbbLZ1ANkWhVEyvmpVTHRJ5WMp4/exec", {
                                                 method: "POST",
                                                 headers: { "Content-Type": "application/json" },
@@ -5759,7 +5764,9 @@
                                             .catch(error => {
                                                 console.error("Error:", error);
                                                 alert("Submission failed! Check the console.");
+                                                
                                             });
+                                            
                                         });
                                     });
                                     </script>
